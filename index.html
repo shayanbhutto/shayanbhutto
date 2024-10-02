@@ -3,43 +3,570 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shayan Bhutto - Portfolio</title>
-    <link rel="icon" href="icon.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Shayan Bhutto - Full-Stack Developer & Electronics Engineer</title>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #ffffff;
+            --accent-color: #4a90e2;
+            --text-color: #333333;
+            --alt-bg-color: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+        
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-color) !important;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 120px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.8;
+            animation: fadeInUp 1s ease-out 0.5s;
+            animation-fill-mode: both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .code-animation {
+            font-family: 'Courier New', monospace;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+        }
+        
+        .hero-bg circle {
+            fill: var(--accent-color);
+        }
+        
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--alt-bg-color);
+        }
+        
+        /* About */
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .about-description {
+            margin-bottom: 2rem;
+        }
+        
+        .experience, .education {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-color);
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-card {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-skills {
+            margin-top: 1rem;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            color: var(--accent-color);
+            padding: 0.25rem 0.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 1000;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-family: 'Roboto Mono', monospace; /* Monospace fonts can give a modern hashtag feel */
+            font-style: italic; /* Apply italic style */
+        }
+        
+        
+        /* Contact */
+        .contact-description {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-link i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-link span {
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+        
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 1rem 0;
+            }
+        
+            nav ul.show {
+                display: flex;
+            }
+        
+            nav ul li {
+                margin: 0.5rem 30px;
+            }
+        
+            .hero h1 {
+                font-size: 3rem;
+            }
+        
+            .hero p {
+                font-size: 1.2rem;
+            }
+        
+            .code-animation {
+                font-size: 1.2rem;
+            }
+        
+            .contact-links {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        
+            .hero p {
+                font-size: 1rem;
+            }
+        
+            .code-animation {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div id="header"></div> <!-- Header will be loaded here -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Shayan Bhutto</h1>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Full-Stack Developer & Electronics Engineer</h1>
+            <p>Bridging the gap between software and hardware</p>
+            <div class="code-animation floating" id="code-animation"></div>
+        </div>
+    </section>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm Shayan Bhutto, a Full-Stack Developer and Electronics Engineering student.</p>
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about">
+                    <div class="about-description">
+                        <p>I'm a passionate Full-Stack Developer with a strong background in Electronics Engineering. My unique blend of software development skills and hardware knowledge allows me to create innovative solutions that bridge the digital and physical worlds. Currently working at LeaveIt2AI and pursuing my degree in Electronics Engineering at Sukkur IBA, I'm dedicated to leveraging technology to solve complex problems and enhance user experiences.</p>
+                    </div>
+                    <div class="experience">
+                        <h3>Experience</h3>
+                        <div class="timeline-item">
+                            <h4><a href="https://leaveit2ai.com/ai-tools" style="color: black; font-weight: 1000;">LeaveIt2AI</a></h4>
+                            <p>Full-Stack Developer</p>
+                            <p>May 2024 - Present</p>
+                        </div>
+                    </div>
+                    <div class="education">
+                        <h3>Education</h3>
+                        <div class="timeline-item">
+                            <h4><a href="https://iba-suk.edu.pk" style="color: black; font-weight: 1000;">Sukkur IBA</a></h4>
+                            <p>Electronics Engineering Student</p>
+                            <p>October 2021 - Expected Graduation: November 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills">
-            <h2>My Skills <i class="fas fa-gem"></i></h2>
-            <ul>
-                <li>Full-Stack Development</li>
-                <li>Python (Programming Language)</li>
-                <li>Embedded Systems</li>
-            </ul>
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">{ }</div>
+                        <h3>Full-Stack Development</h3>
+                        <p>Proficient in both front-end and back-end technologies, creating seamless web applications.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">&lt;/&gt;</div>
+                        <h3>Python Programming</h3>
+                        <p>Extensive experience in Python for various applications, including web development and data analysis.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                        <h3>Embedded Systems</h3>
+                        <p>Skilled in designing and programming embedded systems, bridging the gap between hardware and software.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>LeaveIt2AI</h3>
+                        <p>Full-Stack Web Development project focusing on task management and productivity enhancement solutions.</p>
+                        <div class="project-skills">
+                            <span class="skill-tag">#Full-Stack</span>
+                            <span class="skill-tag">#Web Development</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>PoultaVet AI</h3>
+                        <p>Full-Stack Chatbot for Poultry Disease Detection and Solution Provision, using Gemini API for enhanced veterinary care.</p>
+                        <div class="project-skills">
+                            <span class="skill-tag">#Full-Stack</span>
+                            <span class="skill-tag">#Gemini API</span>
+                            <span class="skill-tag">#NLP</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Real-time Hand Gesture Control</h3>
+                        <p>Camera-based application using hand gestures to control an RGB LED. The system detects specific finger positions to map various commands.</p>
+                        <div class="project-skills">
+                            <span class="skill-tag">#Computer Vision</span>
+                            <span class="skill-tag">#Real-time Processing</span>
+                            <span class="skill-tag">#IoT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="contact-description">
+                    <p>I'm always open to new opportunities, collaborations, or just a friendly chat about technology. Feel free to reach out through any of the following channels:</p>
+                </div>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/shayanbhutto/" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <!--<a href="#" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>-->
+
+                    <a href="mailto:hi@shayanbhutto.com" class="contact-link">
+                        <i class="far fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://wa.me/923492628909" class="contact-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <div id="footer"></div> <!-- Footer will be loaded here -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shayan Bhutto. All rights reserved.</p>
+        </div>
+    </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script>
-        // Load header and footer using JavaScript
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
+        // Smooth scrolling with offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const offset = 60;
+                navMenu.classList.toggle('show');
+                const target = document.querySelector(this.getAttribute('href'));
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Code animation
+        const codeAnimation = document.getElementById('code-animation');
+        const text = 'const shayan = { fullStack: true, electronics: true };';
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                codeAnimation.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            } else {
+                setTimeout(() => {
+                    codeAnimation.classList.add('floating');
+                }, 500);
+            }
+        }
+
+        typeWriter();
     </script>
 </body>
 </html>
