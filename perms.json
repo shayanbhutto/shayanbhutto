@@ -1,4 +1,4 @@
 {
-  "allow": "no",
+  "allow": "yes",
   "notAllowMsg": "This version of app has been closed."
 }
