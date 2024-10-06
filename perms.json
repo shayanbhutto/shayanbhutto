@@ -1,4 +1,5 @@
 {
   "allow": "yes",
-  "notAllowMsg": "This version of app has been closed."
+  "notAllowMsg": "This version of app has been closed.",
+  "key" : "AIzaSyDOEDJvIUO66U-gtsccyiimdN9vrSQYEbo"
 }
