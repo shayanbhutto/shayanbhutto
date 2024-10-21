@@ -1,0 +1,348 @@
+{
+    "semesters": {
+      
+      "I": {
+        "classes": {
+          "X": {
+            "Monday": [
+              {
+                "start": "09:00 AM",
+                "end": "10:15 AM",
+                "course": "Intro to Computing",
+                "room": "R-307,B-III"
+              },
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Functional English",
+                "room": "R-402,B-III"
+              }
+            ],
+            "Tuesday": [
+              {
+                "start": "09:00 AM",
+                "end": "10:15 AM",
+                "course": "Calculus and Analytic Geometry",
+                "room": "R-406,B-III"
+              },
+              {
+                "start": "10:30 AM",
+                "end": "01:15 PM",
+                "course": "Intro to Computing - Lab",
+                "room": "R-308,B-II"
+              }
+            ],
+            "Wednesday": [
+            {
+              "start": "09:00 AM",
+              "end": "10:15 AM",
+              "course": "Pakistan Studies",
+              "room": "R-307,B-II"
+            },
+            {
+              "start": "10:30 AM",
+              "end": "11:45 AM",
+              "course": "Applied Physics",
+              "room": "R-208,B-II"
+            }
+          ],
+          "Thursday": [
+            {
+              "start": "09:00 AM",
+              "end": "11:45 AM",
+              "course": "Workshop Practice",
+              "room": "R-301,B-III"
+            },
+            {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Functional English",
+                "room": "R-407,B-III"
+              },
+              {
+                  "start": "02:15 PM",
+                  "end": "03:30 PM",
+                  "course": "Calculus and Analytic Geometry",
+                  "room": "R-501,B-III"
+                }
+          ],
+          "Friday": [
+            {
+              "start": "12:00 PM",
+              "end": "01:15 PM",
+              "course": "Applied Physics",
+              "room": "R-109,B-II"
+            },
+
+            {
+              "start": "02:15 PM",
+              "end": "05:00 PM",
+              "course": "Applied Physics - Lab",
+              "room": "R-506,B-III"
+            }  
+            ]
+          },
+          "Y": {
+            "Monday": [
+              {
+                "start": "09:00 AM",
+                "end": "10:15 AM",
+                "course": "Intro to Computing",
+                "room": "R-307,B-III"
+              },
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Functional English",
+                "room": "R-402,B-III"
+              }
+            ],
+            "Tuesday": [
+              {
+                "start": "09:00 AM",
+                "end": "10:15 AM",
+                "course": "Calculus and Analytic Geometry",
+                "room": "R-406,B-III"
+              },
+              {
+                "start": "10:30 AM",
+                "end": "01:15 PM",
+                "course": "Intro to Computing - Lab",
+                "room": "R-308,B-II"
+              }
+            ],
+            "Wednesday": [
+            {
+              "start": "09:00 AM",
+              "end": "10:15 AM",
+              "course": "Pakistan Studies",
+              "room": "R-307,B-II"
+            },
+            {
+              "start": "10:30 AM",
+              "end": "11:45 AM",
+              "course": "Applied Physics",
+              "room": "R-208,B-II"
+            },
+
+            {
+              "start": "12:00 PM",
+              "end": "03:30 PM",
+              "course": "Applied Physics - Lab",
+              "room": "R-506,B-III"
+            } 
+          ],
+          "Thursday": [
+            {
+              "start": "09:00 AM",
+              "end": "11:45 AM",
+              "course": "Workshop Practice",
+              "room": "R-301,B-III"
+            },
+            {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Functional English",
+                "room": "R-407,B-III"
+              },
+              {
+                  "start": "02:15 PM",
+                  "end": "03:30 PM",
+                  "course": "Calculus and Analytic Geometry",
+                  "room": "R-501,B-III"
+                }
+          ],
+          "Friday": [
+            {
+              "start": "12:00 PM",
+              "end": "01:15 PM",
+              "course": "Applied Physics",
+              "room": "R-109,B-II"
+            } 
+            ]
+          }
+        }
+      },
+      
+      "II": {},
+      "III": {},
+      "IV": {},
+      "V": {},
+      "VI": {},
+
+      "VII": {
+        "classes": {
+          "Electronics": {
+            "Monday": [
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Project Management",
+                "room": "R-406,B-III"
+              },
+              {
+                "start": "02:15 PM",
+                "end": "03:30 PM",
+                "course": "Digital System Design",
+                "room": "R-501,B-III"
+              }
+            ],
+            "Tuesday": [
+              {
+                "start": "09:00 AM",
+                "end": "11:45 AM",
+                "course": "Industrial Electronics - Lab",
+                "room": "R-306,B-III"
+              },
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Technical Writing",
+                "room": "R-312,B-II"
+              }
+            ],
+            "Wednesday": [
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Industrial Electronics",
+                "room": "R-502,B-III"
+              },
+              {
+                "start": "04:45 PM",
+                "end": "05:00 PM",
+                "course": "Artificial Intelligence",
+                "room": "R-502,B-III"
+              }
+            ],
+            "Thursday": [
+              {
+                "start": "10:30 AM",
+                "end": "11:45 AM",
+                "course": "Industrial Electronics",
+                "room": "R-401,B-III"
+              },
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Artificial Intelligence",
+                "room": "R-508,B-III"
+              },
+              {
+                "start": "02:15 PM",
+                "end": "03:30 PM",
+                "course": "Digital System Design",
+                "room": "R-401,B-III"
+              },
+              {
+                "start": "03:45 PM",
+                "end": "05:00 PM",
+                "course": "Project Management",
+                "room": "R-501,B-III"
+              }
+            ],
+            "Friday": [
+              {
+                "start": "09:00 AM",
+                "end": "11:45 AM",
+                "course": "Digital System Design - Lab",
+                "room": "R-306,B-III"
+              },
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Technical Writing",
+                "room": "R-406,B-III"
+              }
+            ]
+          },
+          "Power": {
+            "Monday": [
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Project Management",
+                "room": "R-406,B-III"
+              },
+              {
+                "start": "02:15 PM",
+                "end": "05:00 PM",
+                "course": "Power System Analysis - Lab",
+                "room": "R-308,B-III"
+              }
+            ],
+            "Tuesday": [
+              {
+                "start": "09:00 AM",
+                "end": "11:45 AM",
+                "course": "Power Distribution & Utilization - Lab",
+                "room": "R-210,B-III"
+              },
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Technical Writing",
+                "room": "R-312,B-II"
+              }
+            ],
+            "Wednesday": [
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Power Distribution & Utilization",
+                "room": "R-406,B-III"
+              },
+              {
+                "start": "04:45 PM",
+                "end": "05:00 PM",
+                "course": "Artificial Intelligence",
+                "room": "R-502,B-III"
+              }
+            ],
+            "Thursday": [
+              {
+                "start": "10:30 AM",
+                "end": "11:45 AM",
+                "course": "Power System Analysis",
+                "room": "R-403,B-III"
+              },
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Artificial Intelligence",
+                "room": "R-508,B-III"
+              },
+              {
+                "start": "02:15 PM",
+                "end": "03:30 PM",
+                "course": "Power Distribution & Utilization",
+                "room": "R-502,B-III"
+              },
+              {
+                "start": "03:45 PM",
+                "end": "05:00 PM",
+                "course": "Project Management",
+                "room": "R-501,B-III"
+              }
+            ],
+            "Friday": [
+              {
+                "start": "12:00 PM",
+                "end": "01:15 PM",
+                "course": "Technical Writing",
+                "room": "R-406,B-III"
+              },
+              {
+                "start": "03:45 PM",
+                "end": "05:00 PM",
+                "course": "Power System Analysis",
+                "room": "R-501,B-III"
+              }
+            ]
+          }
+        }
+      },
+      "VIII": {}
+    }
+  }
+  
