@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Scanner - AI Phishing Detection</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --deep-black: #000000;
+            --dark-blue: #0A1128;
+            --bright-blue: #1E90FF;
+            --text-light: #E0E0E0;
+            --accent-blue: #0077BE;
+            --warning-red: #FF4136;
+            --safe-green: #2ECC40;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--deep-black);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+        .glass-morphism {
+            background: rgba(30, 144, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(30, 144, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(30, 144, 255, 0.1);
+        }
+        .workflow-step {
+            position: relative;
+            padding-left: 60px;
+        }
+        .workflow-step::before {
+            content: attr(data-step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .app-icon {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid var(--bright-blue);
+        }
+        .app-icon:hover {
+            box-shadow: 0 15px 45px rgba(30, 144, 255, 0.3);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-blue);
+        }
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(30, 144, 255, 0.2);
+        }
+        .download-btn {
+            background: linear-gradient(135deg, var(--accent-blue), var(--bright-blue));
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s;
+            z-index: -1;
+        }
+        .download-btn:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <header class="relative py-16 text-center">
+            <img src="scamscanner.png" alt="Scam Scanner App Icon" class="app-icon mx-auto mb-6 w-40 h-40 rounded-3xl">
+            <h1 class="text-5xl font-bold mb-4 text-bright-blue">Scam Scanner</h1>
+            <p class="text-2xl mb-8 text-text-light font-light">AI-Powered Phishing Detection</p>
+        </header>
+
+        <section class="features py-12 space-y-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="feature-card glass-morphism p-8 rounded-2xl">
+                    <h2 class="text-3xl font-semibold mb-6 text-bright-blue">Project Goals</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="mr-4 text-2xl">🎯</span>
+                            Accurate Multi-Language Phishing Detection
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-4 text-2xl">🛡️</span>
+                            User-Friendly Security Interface
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-card glass-morphism p-8 rounded-2xl">
+                    <h2 class="text-3xl font-semibold mb-6 text-bright-blue">How It Works</h2>
+                    <div class="space-y-4">
+                        <div class="workflow-step" data-step="1">
+                            Open the Scam Scanner App
+                        </div>
+                        <div class="workflow-step" data-step="2">
+                            Enter Sender's Phone Number
+                        </div>
+                        <div class="workflow-step" data-step="3">
+                            Input Message Content
+                        </div>
+                        <div class="workflow-step" data-step="4">
+                            Click Analyze Button
+                        </div>
+                        <p class="text-sm text-gray-400 mt-2">
+                            <span class="text-bright-blue">*</span> Requires Internet Connection
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detection-levels py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card glass-morphism p-8 rounded-2xl text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-safe-green">Safe</h3>
+                    <p>No suspicious elements detected in the message</p>
+                </div>
+                <div class="feature-card glass-morphism p-8 rounded-2xl text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-500">Caution</h3>
+                    <p>Potential risks identified, exercise judgment</p>
+                </div>
+                <div class="feature-card glass-morphism p-8 rounded-2xl text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-warning-red">Scam</h3>
+                    <p>High probability of phishing attempt detected</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="download py-16 text-center">
+            <img src="scamscannerbanner.jpg" alt="Scam Scanner App Banner" class="mx-auto mb-12 rounded-3xl shadow-2xl">
+            <a href="https://li2ai.nyc3.digitaloceanspaces.com/shayan/ScamScannerAI.apk" class="download-btn inline-block px-12 py-5 rounded-full text-xl font-bold uppercase tracking-widest text-white">
+                Download for Android
+            </a>
+        </section>
+    </div>
+</body>
+</html>
